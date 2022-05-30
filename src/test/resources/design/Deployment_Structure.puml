@@ -1,0 +1,13 @@
+@startuml
+node nginx <<docker-container>> {
+    artifact ClinicFront
+}
+
+node tomcat <<docker-container>> {
+    artifact ClinicBackend
+}
+
+node postgresql <<docker-container>> {
+    artifact ClinicDatabase
+}
+@enduml

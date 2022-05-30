@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.clinic.scheduler.SchedulerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-05-30T10:07:15" hostname="Hosams-MacBook-Pro.local" time="0.069">
+  <properties/>
+  <testcase name="Schedule a visit for 1st patient in pediatric clinic room" classname="org.clinic.scheduler.SchedulerTest" time="0.062"/>
+  <testcase name="Schedule a visit for 3rd patient in pediatric clinic room" classname="org.clinic.scheduler.SchedulerTest" time="0.001"/>
+  <testcase name="Schedule a visit for 1st patient next day in pediatric clinic room" classname="org.clinic.scheduler.SchedulerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

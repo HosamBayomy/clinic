@@ -1,0 +1,27 @@
+@startuml
+
+component ClinicSystem {
+
+left to right direction
+interface EntranceTime
+[Search]
+[Scheduler]
+[Notifier]
+[PatientManagement]
+[ClinicRoomManagement]
+[ExternalServiceProxy]
+
+[Scheduler] -d-> EntranceTime
+[Notifier]  -u-( EntranceTime
+[ExternalServiceProxy] -d-> Location
+[Notifier] -u-( Location
+[PatientManagement] -d-> Patient
+[ClinicRoomManagement] -d-> ClinicRoom
+[Scheduler] -u-( Patient
+[Scheduler] -u-( ClinicRoom
+[Search] -u-( Patient
+[ExternalServiceProxy] -u-( Patient
+}
+
+
+@enduml

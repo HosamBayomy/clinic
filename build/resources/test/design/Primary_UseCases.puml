@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+
+rectangle Clinic <<Subsystem>> {
+    usecase "Search for Patient"            as sfp  #palegreen;line:green
+    usecase "Register New Patient"          as rnp  #palegreen;line:green
+    usecase "Schedule Patient Visit"        as spa  #palegreen;line:green
+    usecase "Entrance Notifier"             as ent  #palegreen;line:green
+}
+
+actor "Main Database"     <<RDBMS>>       as psql
+actor "Clinic Operator"   <<Human>>       as cop #palegreen;line:green;line.bold;text:green
+actor "Patient"           <<Human>>       as pat #palegreen;line:green;line.bold;text:green
+actor "GPS"               <<System>>      as gps #aliceblue;line:blue;line.bold;text:blue
+actor "Medical System"    <<System>>      as med #aliceblue;line:blue;line.bold;text:blue
+
+cop  -- rnp   #green
+cop  -- spa   #green
+cop  -- sfp   #green
+pat  -- ent   #green
+
+rnp  -- psql
+spa  -- psql
+sfp  -- psql
+ent  -- psql
+
+Clinic -down- gps
+Clinic -up- med
+
+@enduml
