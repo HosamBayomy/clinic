@@ -42,9 +42,9 @@ public class Scheduler {
     public Reservation scheduleVisit() {
         int orderInQueue = getLastReservationOfClinicQueueCurrentCapacity() % (clinicRoom.getDayCapacity()) + 1;
         int minutesOfWaiting = (orderInQueue - 1) * clinicRoom.getAveragePatientMinutes();
-        LocalDate reservationDate = getSchedulerStartingFromDate();
+        LocalDate reservationStartingFromDate = getSchedulerStartingFromDate();
         Reservation reservation =  new Reservation(patient.getId(), clinicRoom.getRoomNumber(),
-                scheduleForFirstPatientInClinicFromDay(reservationDate),
+                scheduleForPatientInClinicFromDay(reservationStartingFromDate),
                 orderInQueue, clinicRoom.getStartTime().plusMinutes(minutesOfWaiting));
         clinicQueue.add(reservation);
         return reservation;
@@ -60,7 +60,7 @@ public class Scheduler {
         return getLastReservationOfClinicQueueCurrentCapacity() == clinicRoom.getDayCapacity();
     }
 
-    private LocalDate scheduleForFirstPatientInClinicFromDay(LocalDate reservationDate) {
+    private LocalDate scheduleForPatientInClinicFromDay(LocalDate reservationDate) {
         LocalDate returnableDate = reservationDate;
         while (todayIsNotOneOfClinicAvailableDays(returnableDate)) {
             returnableDate = returnableDate.plusDays(1);

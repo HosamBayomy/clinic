@@ -60,7 +60,7 @@ com.marisoft.dac.services.web/src/main/webapp/ui/*
 *.ipr
 
 
-
+\.gradle/
 \.idea/
 
 *.1
@@ -69,5 +69,6 @@ com.marisoft.dac.services.web/src/main/webapp/ui/*
 *.log*
 .vscode
 .idea
+.gradle
 .clover
 .settings
