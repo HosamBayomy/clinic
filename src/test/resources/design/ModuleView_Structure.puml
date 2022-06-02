@@ -15,6 +15,7 @@ interface EntranceTime
 [Notifier]  -u-( EntranceTime
 [ExternalServiceProxy] -d-> Location
 [Notifier] -u-( Location
+[Notifier] -u-( Patient
 [PatientManagement] -d-> Patient
 [ClinicRoomManagement] -d-> ClinicRoom
 [Scheduler] -u-( Patient

@@ -61,7 +61,9 @@ com.marisoft.dac.services.web/src/main/webapp/ui/*
 
 
 \.gradle/
+\gradle/
 \.idea/
+\build/
 
 *.1
 
@@ -72,3 +74,5 @@ com.marisoft.dac.services.web/src/main/webapp/ui/*
 .gradle
 .clover
 .settings
+build
+gradle
