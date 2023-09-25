@@ -20,4 +20,4 @@ Feature: Schedule a visit for a patient
     When  Operator requests to reserve a visit for Patient "20220030" in a "Pediatric" Clinic Room with physician "Ahmed"
     Then  the system make Reservation as follows:
       | Patient  | Date       | Order In Queue | Expected Entrance Time | Physician |
-      | 20220023 | 28/05/2022 | 8              | 05:45 PM               | Sherif     |
+      | 20220023 | 28/05/2022 | 8              | 05:45 PM               | Sherif    |
